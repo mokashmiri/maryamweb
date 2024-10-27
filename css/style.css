@@ -30,6 +30,7 @@ h1 {
     font-family: 'Lato', sans-serif;
     font-size: 6rem;
     line-height: 1.2;
+    font-weight: bold;
     color: #000;
     text-align: center;
     margin-bottom: 3rem;
@@ -147,7 +148,7 @@ nav li a:hover {
 }
 
 #home h1 {
-    color: #fff;
+    color: #000000;
 }
 
 /* About section
@@ -155,6 +156,7 @@ nav li a:hover {
 
 #about {
     padding: 80px 0;
+    position: relative;
 }
 
 .about-img-div img {
@@ -190,14 +192,14 @@ nav li a:hover {
 .portfolio_container {
     display: grid;
     grid-template-columns: repeat(4, minmax(250px, 1fr));
-    gap: 30px; /* Adjusted gap for better spacing */
-    justify-items: stretch; /* Ensures each item takes up full width available in the column */
+    gap: 30px;
+    justify-items: stretch;
 }
 
 .project-thumbnail {
     width: 100%;
     background-color: #fff;
-    padding: 20px; /* Slightly increased padding */
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -208,14 +210,14 @@ nav li a:hover {
 }
 
 .project-thumbnail h3 {
-    font-size: 22px; /* Increased font size for better readability */
+    font-size: 22px;
     margin-bottom: 15px;
     color: #021869;
 }
 
 .project-thumbnail img {
     width: 100%;
-    max-height: 300px; /* Increased height for larger images */
+    max-height: 300px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -223,7 +225,7 @@ nav li a:hover {
 
 .slider {
     width: 100%;
-    height: 450px; /* Increased height to fit larger images */
+    height: 450px;
     margin-top: 20px;
     overflow: hidden;
 }
@@ -234,7 +236,6 @@ nav li a:hover {
     object-fit: cover;
     border-radius: 5px;
 }
-
 
 /* Contact section
 ==================================================*/
@@ -277,7 +278,7 @@ nav li a:hover {
     }
 
     .slider {
-        height: 350px; /* Reduced height for smaller screens */
+        height: 350px;
     }
 }
 
@@ -291,7 +292,27 @@ nav li a:hover {
     }
 
     .slider {
-        height: 300px; /* Further reduce slider height for mobile devices */
+        height: 300px;
+    }
+
+    #about {
+        padding: 60px 0;
+    }
+
+    .about-border {
+        width: 300px;
+        height: 300px;
+        top: -10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .about-img-div {
+        max-width: 300px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
     }
 }
 
@@ -302,15 +323,29 @@ nav li a:hover {
 
     .about-border {
         width: 265px;
+        height: 265px;
+    }
+
+    .about-img-div {
+        max-width: 265px;
     }
 
     .slider {
-        height: 250px; /* Reduced slider height for small screens */
+        height: 250px;
     }
 }
 
 @media (max-width: 420px) {
     nav li a {
         font-size: 12px;
+    }
+
+    .about-border {
+        width: 265px;
+        height: 265px;
+    }
+
+    .about-img-div {
+        max-width: 265px;
     }
 }
