@@ -1,0 +1,50 @@
+/* Full-screen Welcome Section */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.welcome-section {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: #021869; /* Background color */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome-message {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.welcome-message h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-message p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.welcome-message button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #021869;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.welcome-message button:hover {
+    background-color: #ddd;
+}

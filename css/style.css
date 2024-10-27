@@ -1,0 +1,316 @@
+/* Table of Content
+==================================================
+    - Google fonts & font family -
+    - typography -
+    - General -
+    - Preloader -
+    - Header -
+    - home section -
+    - About section -
+    - experience section -
+    - projects section -
+    - Contact section -
+    - Responsive media queries -
+*/
+
+/* Google fonts & font family
+==================================================*/
+
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,600,700';
+
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+
+/* typography
+==================================================*/
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 6rem;
+    line-height: 1.2;
+    color: #000;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    color: #021869;
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+/* General
+==================================================*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.size-50 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.h-50 {
+    height: 50px;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+/* Preloader
+==================================================*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #425BB5;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
+
+/* Header
+==================================================*/
+
+header {
+    text-align: center;
+    height: 65px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav li a {
+    color: #444;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav li a:hover {
+    color: #021869;
+}
+
+/* home section
+==================================================*/
+
+#home {
+    background: url(../img/image31_cleanup.jpg) no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#home h1 {
+    color: #fff;
+}
+
+/* About section
+==================================================*/
+
+#about {
+    padding: 80px 0;
+}
+
+.about-img-div img {
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.about-border {
+    position: absolute;
+    border: 10px solid #061c6a;
+    width: 410px;
+    height: 410px;
+    top: 0px;
+    left: 150px;
+    z-index: 1;
+}
+
+/* Experience section
+==================================================*/
+
+#experience {
+    padding: 80px 0;
+    background: #f7f7f7;
+}
+
+/* Projects section
+==================================================*/
+
+#projects {
+    padding: 80px 0;
+}
+
+.portfolio_container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 30px; /* Adjusted gap for better spacing */
+    justify-items: stretch; /* Ensures each item takes up full width available in the column */
+}
+
+.project-thumbnail {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px; /* Slightly increased padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.03);
+}
+
+.project-thumbnail h3 {
+    font-size: 22px; /* Increased font size for better readability */
+    margin-bottom: 15px;
+    color: #021869;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    max-height: 300px; /* Increased height for larger images */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.slider {
+    width: 100%;
+    height: 450px; /* Increased height to fit larger images */
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* Contact section
+==================================================*/
+
+.contact-section {
+    padding: 80px 0;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social li a {
+    color: #333;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.social li a:hover {
+    color: #425BB5;
+}
+
+/* Responsive media queries
+==================================================*/
+
+@media (max-width: 991px) {
+    .portfolio_container {
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+    }
+
+    .project-thumbnail {
+        width: 100%;
+    }
+
+    .slider {
+        height: 350px; /* Reduced height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio_container {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+
+    nav li {
+        margin: 0 10px;
+    }
+
+    .slider {
+        height: 300px; /* Further reduce slider height for mobile devices */
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-border {
+        width: 265px;
+    }
+
+    .slider {
+        height: 250px; /* Reduced slider height for small screens */
+    }
+}
+
+@media (max-width: 420px) {
+    nav li a {
+        font-size: 12px;
+    }
+}
