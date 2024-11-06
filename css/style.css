@@ -139,7 +139,7 @@ nav li a:hover {
 ==================================================*/
 
 #home {
-    background: url(../img/image31_cleanup.jpg) no-repeat center center / cover;
+    background: url(../img/image31_cleanup.png) no-repeat center center / cover;
     height: 100vh;
     display: flex;
     align-items: center;
